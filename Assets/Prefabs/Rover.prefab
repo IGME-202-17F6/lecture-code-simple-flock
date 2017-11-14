@@ -236,12 +236,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: affda784176224da3b6ae27923bcb610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderTarget: {fileID: 1832226289428606}
-  wanderRadius: 1.5
+  velocity: {x: 0, y: 0, z: 0}
   mass: 1
   maxSpeed: 2
   maxTurn: 0.25
   radius: 0.25
+  minDistanceSq: 0.5
   futurePosIndicator: {fileID: 1975469817034108}
   target: {fileID: 0}
   threshold: 5

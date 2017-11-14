@@ -22,8 +22,11 @@ public class Rover : Mover {
 			Vector3 wallForce = AvoidWall ();
 			ApplyForce ((xWeight + zWeight) * wallForce);
 		} else {
-//			ApplyForce ( Align(man.flockHeading) * man.alignWeight);
-//			ApplyForce ( Cohere(man.averagePos) * man.cohereWeight);
+			ApplyForce ( Align(man.flockHeading) * man.alignWeight);
+			ApplyForce ( Cohere(man.averagePos) * man.cohereWeight);
+			Vector3 separateForce = Separate (man.findNearestNeighborPos (this));
+			Debug.Log (separateForce);
+			ApplyForce ( separateForce * man.separateWeight);
 		}
 	}
 
